@@ -1,0 +1,38 @@
+{% extends './layout.html' %}
+
+{% block title %}Reservaciones{% endblock %}
+
+{% block body %}
+<div class="cuadricula">
+<h1>Reservaciones</h1>
+<div class="row g-3">
+    <div class="col-md-6">
+        <label for="inputName" class="form-label fw-bolder">Nombre</label>
+        <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+    </div>
+    <div class="col-md-6">
+        <label for="inputLastname" class="form-label fw-bolder">Apellido</label>
+        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+    </div>
+    <div class="col-md-6">
+        <label for="inputEmail4" class="form-label fw-bolder">Correo electronico</label>
+        <input type="email" class="form-control" id="inputEmail4">
+    </div>
+    <div class="col-12"> 
+        <label for="inputAddress" class="form-label fw-bolder">Habitacion</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    </div>
+    <div class="col-4">
+        <label class="form-label fw-bolder" for="fecha">Selecciona fecha entrada:</label>
+        <input type="date" class="form-control" id="fecha" name="fecha">
+    </div>
+    <div class="col-4">
+        <label class="form-label fw-bolder" for="fecha">Selecciona fecha salida:</label>
+        <input type="date" class="form-control" id="fecha" name="fecha">
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Confirmar Reserva</button>
+    </div>
+</div>
+</div>
+{% endblock %}

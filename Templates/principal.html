@@ -1,0 +1,25 @@
+{% extends './layout.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+    {% block body %}
+<div>
+    <div class="row g-3">
+        <div class="col-md-6">
+            <h1>Bienvenidos</h1>
+            <img src="{{ url_for('static', filename='images/hotel2.jpg')}}" class="img-fluid img-thumbnail" height="200" width="400">
+        </div>
+        <div class="col-md-6">
+        </div>
+        <br />
+        <div class="col-md-6 cuadricula">
+            <h4>Vision</h4>
+            <h5>Ser el hotel lider en la region en terminos de calidad, servicio y atencion al cliente. Nos esforzamos por ofrecer una experiencia unica y excepcional a nuestros huespedes, con un servicio personalizado y atencion al detalle en cada una de nuestras habitaciones y areas comunes. Nos comprometemos a ser un referente en la industria hotelera, ofreciendo una experiencia inolvidable a cada uno de nuestros clientes.</h5>
+        </div>
+        <div class="col-md-6 cuadricula">
+            <h4>Mision</h4>
+            <h5>Nuestra mision es proporcionar una estancia unica y memorable para nuestros huespedes, ofreciendo una experiencia personalizada y excepcional en cada uno de nuestros servicios. Nos esforzamos por superar las expectativas de nuestros clientes y garantizar su satisfaccion durante su estancia. Trabajamos con un equipo de profesionales altamente capacitados y comprometidos para ofrecer la maxima calidad en nuestras instalaciones y servicios. Ademas, nos esforzamos por ser un hotel comprometido con la sostenibilidad y el cuidado del medio ambiente.</h5>
+        </div>
+    </div>
+</div>
+    {% endblock %}

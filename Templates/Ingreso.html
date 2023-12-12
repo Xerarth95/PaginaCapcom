@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ingreso de Cuenta</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles2.css')}}">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='images/fondo6.jpg') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+  
+    <div class="container">
+        <img src="{{ url_for('static', filename='images/Osa Resort.jpg')}}" class="img-fluid img-thumbnail" width="200" height="200">
+        <h1>Ingreso de Cuenta</h1>
+        <form action="/identificacion" method="post">
+            <div class="input-group mb-3">
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" required>
+                <br>
+            </div>
+            <div class="input-group mb-3">
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+            </div>
+            <br>
+            <button type="submit" value="Query">Ingresar</button>
+            <a href="#">¿Olvidó su contraseña?</a>
+        </form>
+    </div>
+</body>
+
+</html>

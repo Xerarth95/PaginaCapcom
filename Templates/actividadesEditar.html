@@ -1,0 +1,31 @@
+{% extends './layout.html' %}
+
+{% block title %}Edición de actividad{% endblock %}
+
+{% block body %}
+<div class="cuadricula">
+    <h1>Edición de actividad</h1>
+    <form action="/modificarActividad?id={{actividad['_id']}}" method="post">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label for="inputActividad" class="form-label fw-bolder">Actividad</label>
+                <input type="text" name="inputActividad" id="inputActividad" class="form-control" placeholder="Nombre de la actividad" aria-label="Actividad"
+                 required value="{{ actividad['Actividad'] }}">
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label fw-bolder">Clima de preferencia para realizar la
+                    actividad</label>
+                <select class="form-control" name="inputClima" id="inputClima" required>
+                     <option value="" disabled>Seleccione un tipo de clima</option>
+                     <option value="Soleado" {% if 'Soleado' in actividad['ClimaDePreferencia'] %}selected{% endif %}>Soleado</option>
+                    <option value="Nublado"  {% if 'Nublado' in actividad['ClimaDePreferencia'] %}selected{% endif %}>Nublado</option>
+                    <option value="Lluvioso" {% if 'Lluvioso' in actividad['ClimaDePreferencia'] %}selected{% endif %}>Lluvioso</option>
+                </select>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Modificar actividad</button>
+            </div>
+    </form>
+</div>
+</div>
+{% endblock %}

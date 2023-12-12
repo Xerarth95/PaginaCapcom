@@ -1,0 +1,30 @@
+th, td {
+    text-align: center;
+    vertical-align: middle
+}
+
+.cuadricula {
+    background-image: linear-gradient(to bottom right, rgba(128, 128, 128, 0.3), rgba(128, 128, 128, 0.3));
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: 50px solid rgba(128, 128, 128, 0.3);
+    box-sizing: border-box;
+    height: 100%;
+    text-align: justify;
+}
+
+td a {
+    text-decoration: none;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+td a:hover {
+
+    background-size: 100% 2px;
+    transition: background-size .5s;
+}

@@ -1,0 +1,51 @@
+{% extends './layout.html' %}
+
+{% block title %}Actividades{% endblock %}
+
+{% block body %}
+
+<link rel="stylesheet" href="/Proyecto/static/css/base10.css">
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <h1>Actividades Recreativas</h1>
+        <h2 style="font-size: 20px;"><a href="/actividadesCrear">Agregar una nueva actividad</a></h2>
+        <div class="table-responsive">
+            <table class="table table-dark table-striped table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <!-- <th>#</th> -->
+                        <th>Actividad</th>
+                        <th>Clima de preferencia</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for actividad in actividades%}
+                    <tr>
+                        <!-- <td hidden>{{actividad['_id']}}</td> -->
+                        <td>{{ actividad['Actividad'] }}</td>
+                        <td>{{ actividad['ClimaDePreferencia'] }}</td>
+                        <td><a href="/actividadesEditar?id={{actividad['_id']}}"
+                                style="color: rgb(135, 199, 255); text-decoration: none;">Editar</a></td>
+                        <td><a href="/eliminarActividad?id={{actividad['_id']}}"
+                                style="color: rgb(255, 151, 151); text-decoration: none;"
+                                onclick="return confirm('¿Está seguro que desea eliminar esta actividad')">Eliminar</a>
+                        </td>
+                        {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <script>
+      alert("{{ messages[0] }}");
+    </script>
+  {% endif %}
+{% endwith %}
+
+{% endblock %}
